@@ -99,7 +99,7 @@ function initFormHandler() {
     //            then save the recipes array back to localStorage
     let recipes = getRecipesFromStorage();
     recipes.push(recipeObject);
-    localStorage.setItem("recipes", JSON.stringify(recipes));
+    saveRecipesToStorage(recipes);
   });
   // B10. TODO - Get a reference to the "Clear Local Storage" button
   let clearStorage = document.getElementsByClassName("danger")[0];
