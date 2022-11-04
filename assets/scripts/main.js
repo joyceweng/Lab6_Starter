@@ -58,9 +58,6 @@ function addRecipesToDocument(recipes) {
  * @param {Array<Object>} recipes An array of recipes
  */
 function saveRecipesToStorage(recipes) {
-  if (recipes == null) {
-    return;
-  }
   // EXPLORE - START (All explore numbers start with B)
   // B1. TODO - Complete the functionality as described in this function
   //            header. It is possible in only a single line, but should
