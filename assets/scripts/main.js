@@ -97,6 +97,7 @@ function initFormHandler() {
     // B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
     //            then save the recipes array back to localStorage
     let recipes = getRecipesFromStorage();
+    if (recipes == null) return;
     recipes.push(recipeObject);
     saveRecipesToStorage(recipes);
   });
@@ -109,6 +110,6 @@ function initFormHandler() {
     localStorage.clear();
     // B13. TODO - Delete the contents of <main>
     let main = document.querySelector("main");
-    main.remove();
+    main.innerHTML = "";
   });
 }
