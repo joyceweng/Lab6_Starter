@@ -24,10 +24,10 @@ function getRecipesFromStorage() {
   // A9. TODO - Complete the functionality as described in this function
   //           header. It is possible in only a single line, but should
   //           be no more than a few lines.
-  if (window.localStorage.getItem('recipes') == null) {
+  if (window.localStorage.getItem("recipes") == null) {
     return [];
   }
-  return JSON.parse(window.localStorage.getItem('recipes'));
+  return JSON.parse(window.localStorage.getItem("recipes"));
 
 }
 
@@ -39,9 +39,6 @@ function getRecipesFromStorage() {
  * @param {Array<Object>} recipes An array of recipes
  */
 function addRecipesToDocument(recipes) {
-  if (recipes == null) {
-    return;
-  }
   // A10. TODO - Get a reference to the <main> element
   let main = document.querySelector("main");
   // A11. TODO - Loop through each of the recipes in the passed in array,
@@ -61,6 +58,9 @@ function addRecipesToDocument(recipes) {
  * @param {Array<Object>} recipes An array of recipes
  */
 function saveRecipesToStorage(recipes) {
+  if (recipes == null) {
+    return;
+  }
   // EXPLORE - START (All explore numbers start with B)
   // B1. TODO - Complete the functionality as described in this function
   //            header. It is possible in only a single line, but should
